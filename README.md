@@ -1,5 +1,5 @@
 # facedetection
-## Face-detection, demonstration using openCV in under 50 lines of C++ code
+## Face-detection, demonstration using OpenCV in under 50 lines of C++ code
 
 > This is not a face "recognition" program !
 
