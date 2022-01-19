@@ -6,8 +6,8 @@
 - Takes static images as input and gives static image as output.
 > .jpg and .png tested 
 
-- Ex. input : ![Input demo image1](https://github.com/ma-phi/facedetection/assets/image1.png)
-- Ex. output : ![Output demo image2](https://github.com/ma-phi/facedetection/assets/image2.png)
+- Ex. input : ![Input demo image1](https://github.com/ma-phi/facedetection/tree/main/assets/image1.png)
+- Ex. output : ![Output demo image2](https://github.com/ma-phi/facedetection/tree/main/assets/image2.png)
 
 ## Requirements
 
