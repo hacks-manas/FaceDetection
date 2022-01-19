@@ -17,7 +17,7 @@
 - Hardware : As long as the system can run OpenCV without problems the program will execute with ease !
 - Updating the path variable to correct directories of OpenCV installation
 
-How the code works 
+> 4k images or larger size iamges take larger time to process (greater than 5 seconds)
 
 ## References
 
