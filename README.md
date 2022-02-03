@@ -13,7 +13,7 @@
 
 - Windows C++ package on Visual Studio 15.0.0 or later, g++ or other variant of the standard C++ compiler implementation
 - OpenCV 2.0/3.0 (3.0 might differ in implementation, please check documentation provided) 
-- Software : Any Operating System that supports OpenCV 2.0 libraries and dependencies, and Environment variables are configured with OpenCV libraries
+- Software : Any Operating System that supports OpenCV 2.0 libraries and dependencies, and Environment variables configured to support OpenCV library calls
 - Hardware : As long as the system can run OpenCV without problems the program will execute with ease !
 - Updating the path variable to correct directories of OpenCV installation
 
