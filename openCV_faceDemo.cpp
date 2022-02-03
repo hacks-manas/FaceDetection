@@ -1,7 +1,6 @@
 /*------------------------------------------------------------------------------------------
-    * Importing required libraries for the program
     * This code will process only .jpg and .png extensions as tested
-    * .svg could be accepted as a valid input after altercation
+    * Importing bare minimum libraries required to display face-detection 
 ------------------------------------------------------------------------------------------*/
 
 #include <iostream>
@@ -30,8 +29,8 @@ using namespace cv;
 
 int main(void) {
     /*---------------------------------------------------------------------------------------
-        * Creating a faceDetection object from the CascadeCalssifier ckass
-        * The file required here is a Haar-Cascade template
+        * Creating a faceDetection object from the CascadeCalssifier class
+        * The file required here is a Haar-Cascade template provided by OpenCV
     -----------------------------------------------------------------------------------------*/
 
     CascadeClassifier faceDetection;
@@ -44,16 +43,16 @@ int main(void) {
         exit(0);
 
         /*---------------------------------------------------------------------------------------
-            * The input path is limited to 100 characters
+            * The input path is limited to 128 characters
             * Storing the path in input_path variable to pass as a parameter
             * Mat is an image container which stores the image as a matrix
             * Mat class helps automatically allocate memory for the object
         -----------------------------------------------------------------------------------------*/
 
-        char input_path[100];
+        char input_path[128];
         cout << "\n Enter path of image : ";
         
-        cin.getline(input_path, 100);
+        cin.getline(input_path, 128);
         Mat img = imread(input_path, IMREAD_UNCHANGED);
 
         if (img.empty()) {
@@ -67,11 +66,14 @@ int main(void) {
         }
 
         /*-----------------------------------------------------------------------------------------
-            * Choosing a vect data structure to store the image data
-            * Vector faces stores the image data in a 2-dimensional form
-            * detectMultiScale function is the classifier used to plot the features
-            * The program scans the face-2d-array and subsequently, if face is found 
-            * draws a green rectangle around the feature - "face" in the image
+            * Using vector data structure to store image data 
+            * Vector "faces"     : stores the image data in a 2-dimensional form
+            * detectMultiScale() : function is the classifier used to plot the features
+            * Point pt1, pt2     : Template class for 2-D points specified by x, y coordinates
+            * The program scans the face-2d-array and subsequently, if a face is found the
+            * rectangle()        : draws a green rectangle around the feature - "face" in the image
+            * Scalar()           : Template class for a 4-element vector derived from Vec, it passes
+                                   the rectangle pixel values to the image
         -------------------------------------------------------------------------------------------*/
 
         vector<Rect> faces;
@@ -84,9 +86,9 @@ int main(void) {
         }
 
         /*-----------------------------------------------------------------------------------------
-            * imwrite - writes this data as output to the predefined output file
-            * The directory for the output has been predefined here
-            * the function writes the output in the mentioned filename
+            * imwrite : writes this data as output to the predetermined-name output file
+            * The directory for output is also predefined 
+            * the function writes the output to the mentioned filename
             * and subsequently prints a successful completion prompt
         -------------------------------------------------------------------------------------------*/
 
